@@ -36,6 +36,8 @@
   },
   "homepage": "https://github.com/RohitKS-04/acquisitions#readme",
   "dependencies": {
+    "@arcjet/inspect": "^1.0.0-beta.17",
+    "@arcjet/node": "^1.0.0-beta.17",
     "@neondatabase/serverless": "^1.0.2",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
