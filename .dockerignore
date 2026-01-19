@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Environment files (injected at runtime)
+.env
+.env.*
+
+# Neon Local
+.neon_local/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Docker files (not needed in image)
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Documentation
+*.md
+!README.md
+
+# Tests (if any)
+__tests__/
+*.test.js
+*.spec.js
+coverage/
+
+# Drizzle migrations (include in image)
+# drizzle/
+
+# OS files
+.DS_Store
+Thumbs.db

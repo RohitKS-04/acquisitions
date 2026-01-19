@@ -56,7 +56,7 @@ export const createUser = async ({ name, email, password, role = 'user' }) => {
       .where(eq(users.email, email))
       .limit(1);
 
-    if (existingUser.length > 0) {
+    if (existingUser) {
       throw new Error('User already exists');
     }
 

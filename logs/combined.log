@@ -63,3 +63,23 @@
 {"level":"info","message":"::1 - - [17/Jan/2026:13:35:15 +0000] \"GET /health HTTP/1.1\" 403 70 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:35:15.671Z"}
 {"ip":"::1","level":"warn","message":"Bot request blocked","path":"/api/auth/sign-in","service":"acquisitions-api","timestamp":"2026-01-17T13:35:22.886Z","userAgent":"PostmanRuntime/7.51.0"}
 {"level":"info","message":"::1 - - [17/Jan/2026:13:35:22 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 403 70 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:35:22.887Z"}
+{"level":"info","message":"User rohitks@gmail.com authenticated successfully.","service":"acquisitions-api","timestamp":"2026-01-17T13:36:37.488Z"}
+{"level":"info","message":"User signed in successfully: rohitks@gmail.com","service":"acquisitions-api","timestamp":"2026-01-17T13:36:37.498Z"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:37 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 109 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:37.503Z"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:41 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:41.030Z"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:43 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:43.387Z"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:47 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:47.717Z"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:48 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:48.876Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","timestamp":"2026-01-17T13:36:49.660Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:49 +0000] \"GET /health HTTP/1.1\" 403 75 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:49.662Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","timestamp":"2026-01-17T13:36:50.266Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:50 +0000] \"GET /health HTTP/1.1\" 403 75 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:50.268Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","timestamp":"2026-01-17T13:36:51.027Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:51 +0000] \"GET /health HTTP/1.1\" 403 75 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:51.029Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","timestamp":"2026-01-17T13:36:51.631Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [17/Jan/2026:13:36:51 +0000] \"GET /health HTTP/1.1\" 403 75 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api","timestamp":"2026-01-17T13:36:51.633Z"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api","timestamp":"2026-01-18T05:47:13.053Z"}
+{"level":"info","message":"::1 - - [18/Jan/2026:05:47:13 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-01-18T05:47:13.108Z"}
+{"level":"info","message":"::1 - - [18/Jan/2026:05:47:13 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-01-18T05:47:13.495Z"}
+{"level":"info","message":"::1 - - [18/Jan/2026:05:47:25 +0000] \"GET /api/auth/sign-up HTTP/1.1\" 404 155 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-01-18T05:47:25.217Z"}
+{"level":"info","message":"::1 - - [18/Jan/2026:05:47:31 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2026-01-18T05:47:31.703Z"}
