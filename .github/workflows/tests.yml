@@ -39,14 +39,14 @@ jobs:
           echo "Running tests with coverage..."
           npm test 2>&1 | tee test-output.txt
           exit_code=${PIPESTATUS[0]}
-          
+
           if [ $exit_code -ne 0 ]; then
             echo "test_failed=true" >> $GITHUB_OUTPUT
             echo "::error::Tests failed. See test output for details."
           else
             echo "test_failed=false" >> $GITHUB_OUTPUT
           fi
-          
+
           exit $exit_code
         continue-on-error: true
 
@@ -63,7 +63,7 @@ jobs:
         run: |
           echo "# Test Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
           if [ "${{ steps.test.outputs.test_failed }}" == "true" ]; then
             echo "## ❌ Tests Failed" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
@@ -81,7 +81,7 @@ jobs:
             echo "## ✅ All Tests Passed" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
           fi
-          
+
           # Add coverage summary if available
           if [ -d coverage ]; then
             echo "## 📊 Coverage Summary" >> $GITHUB_STEP_SUMMARY

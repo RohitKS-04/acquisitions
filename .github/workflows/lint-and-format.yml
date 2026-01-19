@@ -34,12 +34,12 @@ jobs:
           echo "Running ESLint..."
           npm run lint 2>&1 | tee eslint-output.txt
           exit_code=${PIPESTATUS[0]}
-          
+
           if [ $exit_code -ne 0 ]; then
             echo "::error::ESLint found issues. Run 'npm run lint:fix' to automatically fix some problems."
             echo "eslint_failed=true" >> $GITHUB_OUTPUT
           fi
-          
+
           exit $exit_code
         continue-on-error: true
 
@@ -49,12 +49,12 @@ jobs:
           echo "Running Prettier check..."
           npm run format:check 2>&1 | tee prettier-output.txt
           exit_code=${PIPESTATUS[0]}
-          
+
           if [ $exit_code -ne 0 ]; then
             echo "::error::Prettier found formatting issues. Run 'npm run format' to fix them."
             echo "prettier_failed=true" >> $GITHUB_OUTPUT
           fi
-          
+
           exit $exit_code
         continue-on-error: true
 
@@ -63,7 +63,7 @@ jobs:
         run: |
           echo "## ❌ Linting and Formatting Issues Found" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
           if [ "${{ steps.eslint.outputs.eslint_failed }}" == "true" ]; then
             echo "### ESLint Issues" >> $GITHUB_STEP_SUMMARY
             echo "ESLint found issues in your code." >> $GITHUB_STEP_SUMMARY
@@ -71,7 +71,7 @@ jobs:
             echo "**To fix:** Run \`npm run lint:fix\` locally to automatically fix some problems." >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
           fi
-          
+
           if [ "${{ steps.prettier.outputs.prettier_failed }}" == "true" ]; then
             echo "### Prettier Issues" >> $GITHUB_STEP_SUMMARY
             echo "Prettier found formatting issues in your code." >> $GITHUB_STEP_SUMMARY
@@ -79,7 +79,7 @@ jobs:
             echo "**To fix:** Run \`npm run format\` locally to format all files." >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
           fi
-          
+
           echo "::error::Linting or formatting checks failed. See annotations above for fix suggestions."
           exit 1
 
