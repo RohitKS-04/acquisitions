@@ -64,10 +64,10 @@ DB_NAME=neondb
 
 ### Finding Your Neon IDs
 
-| Variable | Where to Find |
-|----------|--------------|
-| `NEON_API_KEY` | Neon Console → Settings → API Keys |
-| `NEON_PROJECT_ID` | Neon Console → Project Settings → General |
+| Variable           | Where to Find                                                       |
+| ------------------ | ------------------------------------------------------------------- |
+| `NEON_API_KEY`     | Neon Console → Settings → API Keys                                  |
+| `NEON_PROJECT_ID`  | Neon Console → Project Settings → General                           |
 | `PARENT_BRANCH_ID` | Neon Console → Project → Branches → Click branch → Copy ID from URL |
 
 ### Development Commands
@@ -104,6 +104,7 @@ docker compose -f docker-compose.dev.yml exec app npm run db:generate
 To keep database branches across container restarts (useful for feature branch development):
 
 1. Uncomment the volumes in `docker-compose.dev.yml`:
+
    ```yaml
    volumes:
      - ./.neon_local/:/tmp/.neon_local
@@ -167,22 +168,22 @@ docker compose -f docker-compose.prod.yml up -d
 
 ### Development (`.env.development`)
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NEON_API_KEY` | Neon API key for authentication | Yes |
-| `NEON_PROJECT_ID` | Your Neon project ID | Yes |
-| `PARENT_BRANCH_ID` | Branch to create ephemeral copies from | Yes |
-| `DB_NAME` | Database name (default: `neondb`) | No |
-| `PORT` | Application port (default: `3000`) | No |
-| `LOG_LEVEL` | Logging level (default: `debug`) | No |
+| Variable           | Description                            | Required |
+| ------------------ | -------------------------------------- | -------- |
+| `NEON_API_KEY`     | Neon API key for authentication        | Yes      |
+| `NEON_PROJECT_ID`  | Your Neon project ID                   | Yes      |
+| `PARENT_BRANCH_ID` | Branch to create ephemeral copies from | Yes      |
+| `DB_NAME`          | Database name (default: `neondb`)      | No       |
+| `PORT`             | Application port (default: `3000`)     | No       |
+| `LOG_LEVEL`        | Logging level (default: `debug`)       | No       |
 
 ### Production (`.env.production`)
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `DATABASE_URL` | Full Neon Cloud connection string | Yes |
-| `PORT` | Application port (default: `3000`) | No |
-| `LOG_LEVEL` | Logging level (default: `info`) | No |
+| Variable       | Description                        | Required |
+| -------------- | ---------------------------------- | -------- |
+| `DATABASE_URL` | Full Neon Cloud connection string  | Yes      |
+| `PORT`         | Application port (default: `3000`) | No       |
+| `LOG_LEVEL`    | Logging level (default: `info`)    | No       |
 
 ---
 
@@ -232,7 +233,7 @@ For JavaScript apps, you may need to add SSL configuration:
 
 ```javascript
 const sql = neon(process.env.DATABASE_URL, {
-  ssl: { rejectUnauthorized: false }
+  ssl: { rejectUnauthorized: false },
 });
 ```
 
